@@ -6,7 +6,7 @@
       {
         "TZOFFSETFROM": "+0000",
         "TZOFFSETTO": "+0000",
-        "TZNAME": "UT",
+        "TZNAME": "UTC",
         "DTSTART": "19700101T000000"
       }
     ]
