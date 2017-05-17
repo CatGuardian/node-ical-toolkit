@@ -1,14 +1,14 @@
-var assert = require("assert"),
-  fs = require('fs'),
-  path = require('path'),
+var assert    = require("assert"),
+  fs          = require('fs'),
+  path        = require('path'),
   icalToolkit = require('../lib/main');
 
 describe('ICAL Parser Test Suite', function () {
   var icsContent,
-    sampleFilePAth = path.join(__dirname, 'sample/apple_exported.ics');
+    sampleFilePath = path.join(__dirname, 'sample/apple_exported.ics');
   before(function (done) {
     this.timeout(10000);
-    fs.readFile(sampleFilePAth, function (err, content) {
+    fs.readFile(sampleFilePath, function (err, content) {
       if (err) throw err;
       icsContent = content;
       assert(icsContent);
@@ -20,6 +20,7 @@ describe('ICAL Parser Test Suite', function () {
 
     it('should parse the content sync', function (done) {
       var json = icalToolkit.parseToJSON(icsContent);
+      //console.log(`jz:: ${JSON.stringify(json, null, 2)}`)
       assert(json);
       assert(!(json instanceof Error));
       assert(json.VCALENDAR);
@@ -66,7 +67,7 @@ describe('ICAL Parser Test Suite', function () {
   describe('Parse contents from file to JSON Async Test', function () {
 
     it('should parse the file', function (done) {
-      icalToolkit.parseFileToJSON(sampleFilePAth, function (err, json) {
+      icalToolkit.parseFileToJSON(sampleFilePath, function (err, json) {
         if (err) throw err;
         assert(json);
         assert(!(json instanceof Error));
@@ -89,7 +90,7 @@ describe('ICAL Parser Test Suite', function () {
   describe('Parse contents from file to JSON Sync Test', function () {
 
     it('should parse the file sync', function (done) {
-      var json = icalToolkit.parseFileToJSONSync(sampleFilePAth);
+      var json = icalToolkit.parseFileToJSONSync(sampleFilePath);
       assert(json);
       assert(!(json instanceof Error));
       assert(json.VCALENDAR);
