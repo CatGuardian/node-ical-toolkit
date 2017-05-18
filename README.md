@@ -332,6 +332,14 @@ Parse the ics files to JSON structures
     });
 
 ```
+# TODO
+
+1. get test cases on 'json.VCALENDAR' working again
+2. support Organizer:SENTBY
+3. support VALARM   element
+4. support VJOURNAL element
+* LONGTERM: SUPPORT ENTIRE SPEC: https://datatracker.ietf.org/doc/rfc5545/
+## Please contribute test cases
 
 # Related Projects
 [moment-timezone](moment/moment-timezone)
