@@ -14,8 +14,8 @@ Ical **generator** supports the following:
 * Full day and repeating events
 * URL property
 * Simple intuitive interface.
- 
- 
+
+
 ##Install
 ```bash
 > npm install ical-toolkit
@@ -31,10 +31,10 @@ Here are the constants you can use:
 ```
 "REQ-PARTICIPANT"; Indicates a participant whose
                  ; participation is required
-                 
+
 "OPT-PARTICIPANT" ; Indicates a participant whose
                   ; participation is optional
-                  
+
 "NON-PARTICIPANT" ; Indicates a participant who is
                   ; copied for information purposes only
 ```
@@ -58,7 +58,7 @@ Here are the constants you can use:
       'REFRESH',
       'COUNTER',
       'DECLINECOUNTER'
-    
+
 ```
 
 #####Repeating Freq for event
@@ -117,32 +117,32 @@ builder.events.push({
 
   //Event start time, Required: type Date()
   start: new Date(),
-  
+
   //Event end time, Required: type Date()
   end: new Date(),
-  
+
   //transp. Will add TRANSP:OPAQUE to block calendar.
   transp: 'OPAQUE',
-  
+
   //Event summary, Required: type String
   summary: 'Test Event',
 
   //All Optionals Below
-  
+
   //Alarms, array in minutes
-  alarms: [15, 10, 5], 
-  
+  alarms: [15, 10, 5],
+
   //Optional: If you need to add some of your own tags
   additionalTags: {
     'SOMETAG': 'SOME VALUE'
   },
-  
+
   //Event identifier, Optional, default auto generated
-  uid: null, 
-  
+  uid: null,
+
   //Optional, The sequence number in update, Default: 0
   sequence: null,
-  
+
   //Optional if repeating event
   repeating: {
     freq: 'DAILY',
@@ -150,29 +150,29 @@ builder.events.push({
     interval: 10,
     until: new Date()
   },
-  
+
   //Optional if all day event
   allDay: true,
-  
+
   //Creation timestamp, Optional.
   stamp: new Date(),
-  
+
   //Optional, floating time.
   floating: false,
-  
+
   //Location of event, optional.
   location: 'Home',
-  
+
   //Optional description of event.
   description: 'Testing it!',
-  
+
   //Optional Organizer info
   organizer: {
     name: 'Kushal Likhi',
     email: 'test@mail',
     sentBy: 'person_acting_on_behalf_of_organizer@email.com' //OPTIONAL email address of the person who is acting on behalf of organizer.
   },
-  
+
   //Optional attendees info
   attendees: [
     {
@@ -187,13 +187,13 @@ builder.events.push({
       email: 'a2@email.com'
     }
   ]
-  
+
   //What to do on addition
   method: 'PUBLISH',
-  
+
   //Status of event
   status: 'CONFIRMED',
-  
+
   //Url for event on core application, Optional.
   url: 'http://google.com'
 });
@@ -322,13 +322,17 @@ Parse the ics files to JSON structures
         done();
       });
     });
- 
+
     it('should parse the file sync', function (done) {
       var json = icalToolkit.parseFileToJSONSync(sampleFilePAth);
       assert(json);
       assert(!(json instanceof Error));
       assert(json.VCALENDAR);
       done();
-    });        
-    
+    });
+
 ```
+
+# Related Projects
+[moment-timezone](moment/moment-timezone)
+
