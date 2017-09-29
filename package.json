@@ -1,5 +1,5 @@
 {
-  "name": "ical-toolkit",
+  "name": "izi-ical-toolkit",
   "version": "1.0.10",
   "description": "ICal generator/updater/parser with Timezone/DST, Alams, Organizers, Events, etc. support.",
   "main": "lib/main.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kushal-likhi/node-ical-toolkit.git"
+    "url": "https://github.com/machinshin/node-ical-toolkit.git"
   },
   "keywords": [
     "iCal",
@@ -19,7 +19,7 @@
     "DST",
     "Alarms"
   ],
-  "author": "Kushal Likhi",
+  "author": "my fork",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kushal-likhi/node-ical-toolkit/issues"
