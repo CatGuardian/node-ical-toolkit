@@ -1,5 +1,5 @@
 {
-  "name": "izi-ical-toolkit",
+  "name": "@machinshin/ical-toolkit",
   "version": "1.0.10",
   "description": "ICal generator/updater/parser with Timezone/DST, Alams, Organizers, Events, etc. support.",
   "main": "lib/main.js",
